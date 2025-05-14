@@ -7,14 +7,14 @@ const ProductionMonitorPage = () => {
   const { workunits, handleBack } = useDashboardPageViewModel()
 
   return (
-    <>
+    <div className="dashboard-page">
       <Header handleBack={handleBack} />
       <div className="workunit-list">
         {workunits.map((unit) => (
           <WorkunitCard key={unit.wkucode} unit={unit} />
         ))}
       </div>
-    </>
+    </div>
   )
 }
 
